@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "btc-output-watcher"
+version = "0.1.0"
+description = "A Bitcoin transaction watcher that tracks specific outputs in the mempool and dumps transactions that spend those outputs."
+authors = ["JACQUOT Vincent"]
+license = "MIT"
+repository = "https://github.com/jack695/Btc-mempool-watcher
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+fluff = "^0.6.0"
+
+[tool.poetry.scripts]
+btc-output-watcher = "scripts.main:main"
+
+[tool.fluff]
+max-line-length = 79
+skip = [
+    "tests/*"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
